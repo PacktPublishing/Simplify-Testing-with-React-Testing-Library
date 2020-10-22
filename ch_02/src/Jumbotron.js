@@ -15,17 +15,17 @@ const Jumbotron = () => {
 
         <nav>
           <ul className="nav" style={{ fontSize: '1.5rem' }}>
-            <li class="nav-item">
+            <li className="nav-item">
               <a className="nav-link text-body" href="/home">
                 Home
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a className="nav-link text-body" href="/features">
                 Features
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a className="nav-link text-body" href="/contact">
                 Contact
               </a>

@@ -3,7 +3,7 @@ import React from 'react'
 const Travel = () => {
   return (
     <div className="card text-center m-1" style={{ width: '18rem' }}>
-      <i class="material-icons" style={{ fontSize: '4rem' }}>
+      <i className="material-icons" style={{ fontSize: '4rem' }}>
         airplanemode_active
       </i>
       <h4>Travel Anywhere</h4>
