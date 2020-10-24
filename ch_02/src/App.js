@@ -1,4 +1,3 @@
-import React from 'react'
 import Jumbotron from './Jumbotron'
 // import Travel from './Travel'
 // import Table from './Table'

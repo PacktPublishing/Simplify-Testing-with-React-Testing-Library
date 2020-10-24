@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Travel = () => {
   return (
     <div className="card text-center m-1" style={{ width: '18rem' }}>
