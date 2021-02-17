@@ -10,14 +10,18 @@ import React from 'react'
 import AddressForm from './AddressForm'
 import PaymentForm from './PaymentForm'
 import Review from './Review'
-
-const shippingAddress = [
-  '1 Material-UI Drive',
-  'Reactville',
-  'Anytown',
-  '99999',
-  'USA'
-]
+const customerInfo = {
+  shippingAddress: {},
+  paymentMethod: {}
+}
+const shippingAddress = {
+  address1: '1 Material-UI Drive',
+  address2: '',
+  city: 'Charlotte',
+  state: 'N.C.',
+  zipCode: '99999',
+  country: 'USA'
+}
 
 const paymentMethod = {
   cardType: 'Visa',

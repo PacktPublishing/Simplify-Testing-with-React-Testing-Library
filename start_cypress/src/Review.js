@@ -53,7 +53,13 @@ const Review = ({ shippingAddress, paymentMethod }) => {
             Shipping
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
-          <Typography gutterBottom>{shippingAddress.join(', ')}</Typography>
+          <Typography gutterBottom>{shippingAddress.address1}</Typography>
+          <Typography gutterBottom>{shippingAddress.address2}</Typography>
+          <Typography gutterBottom>
+            {shippingAddress.city}, {shippingAddress.state}{' '}
+            {shippingAddress.zipCode}
+          </Typography>
+          <Typography gutterBottom>{shippingAddress.country}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
           <Typography variant="h6" gutterBottom className={classes.title}>
