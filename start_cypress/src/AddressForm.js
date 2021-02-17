@@ -17,7 +17,6 @@ const AddressForm = () => {
             name="firstName"
             label="First name"
             fullWidth
-            autoComplete="given-name"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -27,7 +26,6 @@ const AddressForm = () => {
             name="lastName"
             label="Last name"
             fullWidth
-            autoComplete="family-name"
           />
         </Grid>
         <Grid item xs={12}>
@@ -37,7 +35,6 @@ const AddressForm = () => {
             name="address1"
             label="Address line 1"
             fullWidth
-            autoComplete="shipping address-line1"
           />
         </Grid>
         <Grid item xs={12}>
@@ -46,18 +43,10 @@ const AddressForm = () => {
             name="address2"
             label="Address line 2"
             fullWidth
-            autoComplete="shipping address-line2"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="city"
-            name="city"
-            label="City"
-            fullWidth
-            autoComplete="shipping address-level2"
-          />
+          <TextField required id="city" name="city" label="City" fullWidth />
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -74,7 +63,6 @@ const AddressForm = () => {
             name="zip"
             label="Zip / Postal code"
             fullWidth
-            autoComplete="shipping postal-code"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -84,7 +72,6 @@ const AddressForm = () => {
             name="country"
             label="Country"
             fullWidth
-            autoComplete="shipping country"
           />
         </Grid>
       </Grid>

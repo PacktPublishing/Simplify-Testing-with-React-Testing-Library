@@ -11,31 +11,13 @@ const PaymentForm = () => {
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <TextField
-            required
-            id="cardName"
-            label="Name on card"
-            fullWidth
-            autoComplete="cc-name"
-          />
+          <TextField required id="cardName" label="Name on card" fullWidth />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField
-            required
-            id="cardNumber"
-            label="Card number"
-            fullWidth
-            autoComplete="cc-number"
-          />
+          <TextField required id="cardNumber" label="Card number" fullWidth />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField
-            required
-            id="expDate"
-            label="Expiry date"
-            fullWidth
-            autoComplete="cc-exp"
-          />
+          <TextField required id="expDate" label="Expiry date" fullWidth />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
@@ -44,7 +26,6 @@ const PaymentForm = () => {
             label="CVV"
             helperText="Last three digits on signature strip"
             fullWidth
-            autoComplete="cc-csc"
           />
         </Grid>
       </Grid>
