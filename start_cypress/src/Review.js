@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Review = ({ shippingAddress, paymentMethod }) => {
+const Review = ({ customerInfo }) => {
+  const { shippingAddress, paymentMethod } = customerInfo
   const classes = useStyles()
 
   return (

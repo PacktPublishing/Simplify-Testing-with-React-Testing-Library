@@ -10,25 +10,24 @@ import React from 'react'
 import AddressForm from './AddressForm'
 import PaymentForm from './PaymentForm'
 import Review from './Review'
+
 const customerInfo = {
-  shippingAddress: {},
-  paymentMethod: {}
-}
-const shippingAddress = {
-  address1: '1 Material-UI Drive',
-  address2: '',
-  city: 'Charlotte',
-  state: 'N.C.',
-  zipCode: '99999',
-  country: 'USA'
+  shippingAddress: {
+    address1: '1 Material-UI Drive',
+    address2: '',
+    city: 'Charlotte',
+    state: 'N.C.',
+    zipCode: '99999',
+    country: 'USA'
+  },
+  paymentMethod: {
+    cardType: 'Visa',
+    cardHolder: 'Mr John Smith',
+    cardNumber: 'xxxx-xxxx-xxxx-1234',
+    expiryDate: '04/2024'
+  }
 }
 
-const paymentMethod = {
-  cardType: 'Visa',
-  cardHolder: 'Mr John Smith',
-  cardNumber: 'xxxx-xxxx-xxxx-1234',
-  expiryDate: '04/2024'
-}
 const useStyles = makeStyles(theme => ({
   appBar: {
     position: 'relative'
@@ -75,12 +74,7 @@ function getStepContent(step) {
     case 1:
       return <PaymentForm />
     case 2:
-      return (
-        <Review
-          shippingAddress={shippingAddress}
-          paymentMethod={paymentMethod}
-        />
-      )
+      return <Review customerInfo={customerInfo} />
     default:
       throw new Error('Unknown step')
   }
