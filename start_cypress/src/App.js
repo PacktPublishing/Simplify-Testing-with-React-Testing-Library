@@ -1,3 +1,5 @@
-const App = () => <h1>Works</h1>
+import Checkout from './Checkout'
+
+const App = () => <Checkout />
 
 export default App
