@@ -1,13 +1,11 @@
-import Checkbox from '@material-ui/core/Checkbox'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
 
-export default function PaymentForm() {
+const PaymentForm = () => {
   return (
-    <React.Fragment>
+    <>
       <Typography variant="h6" gutterBottom>
         Payment method
       </Typography>
@@ -49,13 +47,9 @@ export default function PaymentForm() {
             autoComplete="cc-csc"
           />
         </Grid>
-        <Grid item xs={12}>
-          <FormControlLabel
-            control={<Checkbox color="secondary" name="saveCard" value="yes" />}
-            label="Remember credit card details for next time"
-          />
-        </Grid>
       </Grid>
-    </React.Fragment>
+    </>
   )
 }
+
+export default PaymentForm

@@ -1,4 +1,3 @@
-import AppBar from '@material-ui/core/AppBar'
 import Button from '@material-ui/core/Button'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Paper from '@material-ui/core/Paper'
@@ -6,12 +5,25 @@ import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
 import Stepper from '@material-ui/core/Stepper'
 import { makeStyles } from '@material-ui/core/styles'
-import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
 import AddressForm from './AddressForm'
 import PaymentForm from './PaymentForm'
 import Review from './Review'
+
+const shippingAddress = [
+  '1 Material-UI Drive',
+  'Reactville',
+  'Anytown',
+  '99999',
+  'USA'
+]
+const paymentMethod = [
+  { name: 'Card type', detail: 'Visa' },
+  { name: 'Card holder', detail: 'Mr John Smith' },
+  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
+  { name: 'Expiry date', detail: '04/2024' }
+]
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -59,7 +71,12 @@ function getStepContent(step) {
     case 1:
       return <PaymentForm />
     case 2:
-      return <Review />
+      return (
+        <Review
+          shippingAddress={shippingAddress}
+          paymentMethod={paymentMethod}
+        />
+      )
     default:
       throw new Error('Unknown step')
   }
@@ -76,13 +93,7 @@ const Checkout = () => {
   return (
     <>
       <CssBaseline />
-      <AppBar position="absolute" color="default" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Company name
-          </Typography>
-        </Toolbar>
-      </AppBar>
+
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
@@ -95,9 +106,9 @@ const Checkout = () => {
               </Step>
             ))}
           </Stepper>
-          <React.Fragment>
+          <>
             {activeStep === steps.length ? (
-              <React.Fragment>
+              <>
                 <Typography variant="h5" gutterBottom>
                   Thank you for your order.
                 </Typography>
@@ -106,9 +117,9 @@ const Checkout = () => {
                   confirmation, and will send you an update when your order has
                   shipped.
                 </Typography>
-              </React.Fragment>
+              </>
             ) : (
-              <React.Fragment>
+              <>
                 {getStepContent(activeStep)}
                 <div className={classes.buttons}>
                   {activeStep !== 0 && (
@@ -125,9 +136,9 @@ const Checkout = () => {
                     {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
                   </Button>
                 </div>
-              </React.Fragment>
+              </>
             )}
-          </React.Fragment>
+          </>
         </Paper>
       </main>
     </>
