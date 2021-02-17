@@ -11,6 +11,13 @@ import AddressForm from './AddressForm'
 import PaymentForm from './PaymentForm'
 import Review from './Review'
 
+const fakeProducts = [
+  { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
+  { name: 'Product 2', desc: 'Another thing', price: '$3.45' },
+  { name: 'Product 3', desc: 'Something else', price: '$6.51' },
+  { name: 'Shipping', desc: '', price: 'Free' }
+]
+
 const customerInfo = {
   shippingAddress: {
     address1: '1 Material-UI Drive',
@@ -74,7 +81,7 @@ function getStepContent(step) {
     case 1:
       return <PaymentForm />
     case 2:
-      return <Review customerInfo={customerInfo} />
+      return <Review customerInfo={customerInfo} products={fakeProducts} />
     default:
       throw new Error('Unknown step')
   }

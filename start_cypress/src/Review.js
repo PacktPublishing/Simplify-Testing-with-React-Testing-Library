@@ -6,13 +6,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
 
-const products = [
-  { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
-  { name: 'Product 2', desc: 'Another thing', price: '$3.45' },
-  { name: 'Product 3', desc: 'Something else', price: '$6.51' },
-  { name: 'Shipping', desc: '', price: 'Free' }
-]
-
 const useStyles = makeStyles(theme => ({
   listItem: {
     padding: theme.spacing(1, 0)
@@ -25,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Review = ({ customerInfo }) => {
+const Review = ({ customerInfo, products }) => {
   const { shippingAddress, paymentMethod } = customerInfo
   const classes = useStyles()
 
