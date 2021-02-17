@@ -18,13 +18,13 @@ const shippingAddress = [
   '99999',
   'USA'
 ]
-const paymentMethod = [
-  { name: 'Card type', detail: 'Visa' },
-  { name: 'Card holder', detail: 'Mr John Smith' },
-  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date', detail: '04/2024' }
-]
 
+const paymentMethod = {
+  cardType: 'Visa',
+  cardHolder: 'Mr John Smith',
+  cardNumber: 'xxxx-xxxx-xxxx-1234',
+  expiryDate: '04/2024'
+}
 const useStyles = makeStyles(theme => ({
   appBar: {
     position: 'relative'

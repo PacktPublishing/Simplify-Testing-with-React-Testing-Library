@@ -60,16 +60,38 @@ const Review = ({ shippingAddress, paymentMethod }) => {
             Payment details
           </Typography>
           <Grid container>
-            {paymentMethod.map(payment => (
-              <React.Fragment key={payment.name}>
-                <Grid item xs={6}>
-                  <Typography gutterBottom>{payment.name}</Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography gutterBottom>{payment.detail}</Typography>
-                </Grid>
-              </React.Fragment>
-            ))}
+            <React.Fragment>
+              <Grid item xs={6}>
+                <Typography gutterBottom>Card Type</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography gutterBottom>{paymentMethod.cardType}</Typography>
+              </Grid>
+            </React.Fragment>
+            <React.Fragment>
+              <Grid item xs={6}>
+                <Typography gutterBottom>Card Holder</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography gutterBottom>{paymentMethod.cardHolder}</Typography>
+              </Grid>
+            </React.Fragment>
+            <React.Fragment>
+              <Grid item xs={6}>
+                <Typography gutterBottom>Card Number</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography gutterBottom>{paymentMethod.cardNumber}</Typography>
+              </Grid>
+            </React.Fragment>
+            <React.Fragment>
+              <Grid item xs={6}>
+                <Typography gutterBottom>Expiry Date</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography gutterBottom>{paymentMethod.expiryDate}</Typography>
+              </Grid>
+            </React.Fragment>
           </Grid>
         </Grid>
       </Grid>
