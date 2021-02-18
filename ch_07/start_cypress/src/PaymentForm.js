@@ -1,9 +1,6 @@
-import Grid from '@material-ui/core/Grid'
-import TextField from '@material-ui/core/TextField'
-import Typography from '@material-ui/core/Typography'
-import React from 'react'
+import { Grid, TextField, Typography } from '@material-ui/core'
 
-const PaymentForm = () => {
+const PaymentForm = ({ formValues, setFormValues }) => {
   return (
     <>
       <Typography variant="h6" gutterBottom>
@@ -11,13 +8,52 @@ const PaymentForm = () => {
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <TextField required id="cardName" label="Name on card" fullWidth />
+          <TextField
+            required
+            id="cardType"
+            label="Card type"
+            fullWidth
+            name="cardType"
+            value={formValues.cardType}
+            onChange={event => setFormValues(event)}
+          />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField required id="cardNumber" label="Card number" fullWidth />
+          <TextField
+            required
+            id="cardName"
+            label="Name on card"
+            fullWidth
+            name="cardHolder"
+            value={formValues.cardHolder}
+            onChange={event => setFormValues(event)}
+          />
         </Grid>
         <Grid item xs={12} md={6}>
-          <TextField required id="expDate" label="Expiry date" fullWidth />
+          <TextField
+            required
+            id="cardNumber"
+            label="Card number"
+            fullWidth
+            type="tel"
+            inputMode="numeric"
+            name="cardNumber"
+            value={formValues.cardNumber}
+            onChange={event => setFormValues(event)}
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            required
+            type="tel"
+            inputMode="numeric"
+            id="expiryDate"
+            label="Expiration Date"
+            fullWidth
+            name="expiryDate"
+            value={formValues.expiryDate}
+            onChange={event => setFormValues(event)}
+          />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
@@ -26,6 +62,9 @@ const PaymentForm = () => {
             label="CVV"
             helperText="Last three digits on signature strip"
             fullWidth
+            name="cardCvv"
+            value={formValues.cardCvv}
+            onChange={event => setFormValues(event)}
           />
         </Grid>
       </Grid>

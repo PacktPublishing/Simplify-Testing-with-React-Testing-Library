@@ -18,21 +18,35 @@ const fakeProducts = [
   { name: 'Shipping', desc: '', price: 'Free' }
 ]
 
+// const customerInfo = {
+//   shippingAddress: {
+//     address1: '1 Material-UI Drive',
+//     address2: '',
+//     city: 'Charlotte',
+//     state: 'N.C.',
+//     zipCode: '99999',
+//     country: 'USA'
+//   },
+//   paymentMethod: {
+//     cardType: 'Visa',
+//     cardHolder: 'Mr John Smith',
+//     cardNumber: 'xxxx-xxxx-xxxx-1234',
+//     expiryDate: '04/2024'
+//   }
+// }
+
 const customerInfo = {
-  shippingAddress: {
-    address1: '1 Material-UI Drive',
-    address2: '',
-    city: 'Charlotte',
-    state: 'N.C.',
-    zipCode: '99999',
-    country: 'USA'
-  },
-  paymentMethod: {
-    cardType: 'Visa',
-    cardHolder: 'Mr John Smith',
-    cardNumber: 'xxxx-xxxx-xxxx-1234',
-    expiryDate: '04/2024'
-  }
+  address1: '',
+  address2: '',
+  city: '',
+  state: '',
+  zipCode: '',
+  country: '',
+  cardType: '',
+  cardHolder: '',
+  cardNumber: '',
+  expiryDate: '',
+  cardCvv: ''
 }
 
 const useStyles = makeStyles(theme => ({
@@ -74,22 +88,34 @@ const useStyles = makeStyles(theme => ({
 
 const steps = ['Shipping address', 'Payment details', 'Review your order']
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddressForm />
-    case 1:
-      return <PaymentForm />
-    case 2:
-      return <Review customerInfo={customerInfo} products={fakeProducts} />
-    default:
-      throw new Error('Unknown step')
-  }
-}
-
 const Checkout = () => {
   const classes = useStyles()
   const [activeStep, setActiveStep] = React.useState(0)
+  const [formValues, setFormValues] = React.useState(customerInfo)
+
+  const handleChange = e => {
+    const { name, value } = e.target
+    setFormValues(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+  function getStepContent(step) {
+    switch (step) {
+      case 0:
+        return (
+          <AddressForm formValues={formValues} setFormValues={handleChange} />
+        )
+      case 1:
+        return (
+          <PaymentForm formValues={formValues} setFormValues={handleChange} />
+        )
+      case 2:
+        return <Review formValues={formValues} products={fakeProducts} />
+      default:
+        throw new Error('Unknown step')
+    }
+  }
 
   const handleNext = () => setActiveStep(activeStep + 1)
 
