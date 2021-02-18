@@ -18,8 +18,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Review = ({ customerInfo, products }) => {
-  const { shippingAddress, paymentMethod } = customerInfo
+const Review = ({ formValues, products }) => {
   const classes = useStyles()
 
   return (
@@ -37,7 +36,7 @@ const Review = ({ customerInfo, products }) => {
         <ListItem className={classes.listItem}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" className={classes.total}>
-            $19.95
+            $99.97
           </Typography>
         </ListItem>
       </List>
@@ -46,14 +45,15 @@ const Review = ({ customerInfo, products }) => {
           <Typography variant="h6" gutterBottom className={classes.title}>
             Shipping
           </Typography>
-          <Typography gutterBottom>John Smith</Typography>
-          <Typography gutterBottom>{shippingAddress.address1}</Typography>
-          <Typography gutterBottom>{shippingAddress.address2}</Typography>
           <Typography gutterBottom>
-            {shippingAddress.city}, {shippingAddress.state}{' '}
-            {shippingAddress.zipCode}
+            {formValues.firstName} {formValues.lastName}
           </Typography>
-          <Typography gutterBottom>{shippingAddress.country}</Typography>
+          <Typography gutterBottom>{formValues.address1}</Typography>
+          <Typography gutterBottom>{formValues.address2}</Typography>
+          <Typography gutterBottom>
+            {formValues.city}, {formValues.state} {formValues.zipCode}
+          </Typography>
+          <Typography gutterBottom>{formValues.country}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
           <Typography variant="h6" gutterBottom className={classes.title}>
@@ -65,7 +65,7 @@ const Review = ({ customerInfo, products }) => {
                 <Typography gutterBottom>Card Type</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography gutterBottom>{paymentMethod.cardType}</Typography>
+                <Typography gutterBottom>{formValues.cardType}</Typography>
               </Grid>
             </React.Fragment>
             <React.Fragment>
@@ -73,7 +73,7 @@ const Review = ({ customerInfo, products }) => {
                 <Typography gutterBottom>Card Holder</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography gutterBottom>{paymentMethod.cardHolder}</Typography>
+                <Typography gutterBottom>{formValues.cardHolder}</Typography>
               </Grid>
             </React.Fragment>
             <React.Fragment>
@@ -81,7 +81,7 @@ const Review = ({ customerInfo, products }) => {
                 <Typography gutterBottom>Card Number</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography gutterBottom>{paymentMethod.cardNumber}</Typography>
+                <Typography gutterBottom>{formValues.cardNumber}</Typography>
               </Grid>
             </React.Fragment>
             <React.Fragment>
@@ -89,7 +89,7 @@ const Review = ({ customerInfo, products }) => {
                 <Typography gutterBottom>Expiry Date</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography gutterBottom>{paymentMethod.expiryDate}</Typography>
+                <Typography gutterBottom>{formValues.expiryDate}</Typography>
               </Grid>
             </React.Fragment>
           </Grid>

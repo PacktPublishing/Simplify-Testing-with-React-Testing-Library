@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
 
-const AddressForm = () => {
+const AddressForm = ({ formValues, setFormValues }) => {
   return (
     <>
       <Typography variant="h6" gutterBottom>
@@ -17,6 +17,8 @@ const AddressForm = () => {
             name="firstName"
             label="First name"
             fullWidth
+            value={formValues.firstName}
+            onChange={event => setFormValues(event)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -26,6 +28,8 @@ const AddressForm = () => {
             name="lastName"
             label="Last name"
             fullWidth
+            value={formValues.lastName}
+            onChange={event => setFormValues(event)}
           />
         </Grid>
         <Grid item xs={12}>
@@ -35,6 +39,8 @@ const AddressForm = () => {
             name="address1"
             label="Address line 1"
             fullWidth
+            value={formValues.address1}
+            onChange={event => setFormValues(event)}
           />
         </Grid>
         <Grid item xs={12}>
@@ -43,10 +49,20 @@ const AddressForm = () => {
             name="address2"
             label="Address line 2"
             fullWidth
+            value={formValues.address2}
+            onChange={event => setFormValues(event)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField required id="city" name="city" label="City" fullWidth />
+          <TextField
+            required
+            id="city"
+            name="city"
+            label="City"
+            fullWidth
+            value={formValues.city}
+            onChange={event => setFormValues(event)}
+          />
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -54,15 +70,19 @@ const AddressForm = () => {
             name="state"
             label="State/Province/Region"
             fullWidth
+            value={formValues.state}
+            onChange={event => setFormValues(event)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="zip"
-            name="zip"
+            id="zipCode"
+            name="zipCode"
             label="Zip / Postal code"
             fullWidth
+            value={formValues.zipCode}
+            onChange={event => setFormValues(event)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -72,6 +92,8 @@ const AddressForm = () => {
             name="country"
             label="Country"
             fullWidth
+            value={formValues.country}
+            onChange={event => setFormValues(event)}
           />
         </Grid>
       </Grid>

@@ -12,30 +12,19 @@ import PaymentForm from './PaymentForm'
 import Review from './Review'
 
 const fakeProducts = [
-  { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
-  { name: 'Product 2', desc: 'Another thing', price: '$3.45' },
-  { name: 'Product 3', desc: 'Something else', price: '$6.51' },
+  { name: 'T-shirt', desc: 'White Fitted Shirt', price: '$19.99' },
+  { name: 'Denim Jeans', desc: 'GAP Jeans', price: '$29.99' },
+  {
+    name: 'Nike Free Runner',
+    desc: 'black/grey running shoe',
+    price: '$49.99'
+  },
   { name: 'Shipping', desc: '', price: 'Free' }
 ]
 
-// const customerInfo = {
-//   shippingAddress: {
-//     address1: '1 Material-UI Drive',
-//     address2: '',
-//     city: 'Charlotte',
-//     state: 'N.C.',
-//     zipCode: '99999',
-//     country: 'USA'
-//   },
-//   paymentMethod: {
-//     cardType: 'Visa',
-//     cardHolder: 'Mr John Smith',
-//     cardNumber: 'xxxx-xxxx-xxxx-1234',
-//     expiryDate: '04/2024'
-//   }
-// }
-
 const customerInfo = {
+  firstName: '',
+  lastName: '',
   address1: '',
   address2: '',
   city: '',
