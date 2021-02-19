@@ -21,7 +21,7 @@ const PaymentForm = ({ formValues, setFormValues }) => {
         <Grid item xs={12} md={6}>
           <TextField
             required
-            id="cardName"
+            id="cardHolder"
             label="Name on card"
             fullWidth
             name="cardHolder"
