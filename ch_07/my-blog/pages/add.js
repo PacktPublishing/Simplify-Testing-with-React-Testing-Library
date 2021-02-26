@@ -7,6 +7,7 @@ const Add = () => {
   const defaultValues = {
     title: '',
     category: '',
+    image_url: '',
     content: ''
   }
   const [newBlog, setNewBlog] = useState(defaultValues)
@@ -71,6 +72,20 @@ const Add = () => {
               value={newBlog.category}
               onChange={handleChange}
             />
+            <label htmlFor="image_url" className="block text-black text-3xl">
+              Image Link
+            </label>
+
+            <input
+              type="text"
+              id="image_url"
+              name="image_url"
+              className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full text-2xl border-4"
+              placeholder="image link"
+              value={newBlog.image_url}
+              onChange={handleChange}
+            />
+
             <label htmlFor="content" className="block text-black text-3xl">
               Content
             </label>

@@ -63,13 +63,17 @@ export default function Post() {
                 Delete post&#62;
               </a>
             </div>
-
             <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">
               {data.post.title}
             </h1>
             <p className="text-sm md:text-base font-normal text-gray-600">
               Published {data.post.created}
             </p>
+            <img
+              className="rounded"
+              src={data.post.image_url}
+              alt={data.post.title}
+            />
           </div>
           <p className="py-6">{data.post.content}</p>
         </div>

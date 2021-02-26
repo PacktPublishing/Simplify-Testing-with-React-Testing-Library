@@ -5,6 +5,7 @@ const postSchema = new Schema({
   title: { type: String, required: true },
   category: { type: String, required: true },
   content: { type: String, required: true },
+  image_url: { type: String, required: true },
   created: { type: String, required: true }
 })
 

@@ -3,7 +3,7 @@ import { getCurrentDate } from '../../utils/getCurrentDate'
 
 export default async (req, res) => {
   if (req.method === 'POST') {
-    const { title, category, content } = req.body
+    const { title, category, image_url, content } = req.body
 
     // Check for duplicate blog
     const checkDuplicate = await (await db()).models.Post.findOne({
@@ -19,6 +19,7 @@ export default async (req, res) => {
           title,
           category,
           content,
+          image_url,
           created: getCurrentDate()
         })
 
