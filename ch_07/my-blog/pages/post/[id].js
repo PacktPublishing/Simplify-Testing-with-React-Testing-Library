@@ -68,16 +68,10 @@ export default function Post() {
               {data.post.title}
             </h1>
             <p className="text-sm md:text-base font-normal text-gray-600">
-              Published 19 February 2019
+              Published {data.post.created}
             </p>
           </div>
-
-          <p className="py-6">
-            The basic blog page layout is available and all using the default
-            Tailwind CSS classes (although there are a few hardcoded style
-            tags). If you are going to use this in your project, you will want
-            to convert the classes into components.
-          </p>
+          <p className="py-6">{data.post.content}</p>
         </div>
       </div>
     </div>

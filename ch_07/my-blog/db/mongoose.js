@@ -2,10 +2,13 @@ import mongoose, { Schema } from 'mongoose'
 import uniqueValidator from 'mongoose-unique-validator'
 
 const postSchema = new Schema({
-  title: { type: String, required: false }
+  title: { type: String, required: true },
+  category: { type: String, required: true },
+  content: { type: String, required: true },
+  created: { type: String, required: true }
 })
 
-// Ensures names are unique
+// Ensures new entries are unique
 postSchema.plugin(uniqueValidator, { message: '{PATH} is already in use' })
 
 const dbConnect = async () => {

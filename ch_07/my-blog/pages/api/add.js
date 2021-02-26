@@ -1,8 +1,9 @@
 import db from '../../db/mongoose'
+import { getCurrentDate } from '../../utils/getCurrentDate'
 
 export default async (req, res) => {
   if (req.method === 'POST') {
-    const { title, categories, content } = req.body
+    const { title, category, content } = req.body
 
     // Check for duplicate blog
     const checkDuplicate = await (await db()).models.Post.findOne({
@@ -16,8 +17,9 @@ export default async (req, res) => {
       try {
         const newPost = await (await db()).models.Post({
           title,
-          categories,
-          content
+          category,
+          content,
+          created: getCurrentDate()
         })
 
         await newPost.save()

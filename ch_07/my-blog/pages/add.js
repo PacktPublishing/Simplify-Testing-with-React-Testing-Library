@@ -6,7 +6,7 @@ import CustomHead from '../components/CustomHead'
 const Add = () => {
   const defaultValues = {
     title: '',
-    categories: '',
+    category: '',
     content: ''
   }
   const [newBlog, setNewBlog] = useState(defaultValues)
@@ -40,11 +40,11 @@ const Add = () => {
   return (
     <>
       <CustomHead title="Add" />
-      <main className="md:6/12 lg:w-8/12 m-auto">
+      <main className="md:6/12 lg:w-8/12 m-auto pb-10">
         <h1 className="text-4xl text-center">Add a new blog</h1>{' '}
         <form onSubmit={handleSubmit}>
           <div className="my-5 text-sm">
-            <label htmlFor="title" className="block text-black">
+            <label htmlFor="title" className="block text-black text-3xl">
               Title
             </label>
             <input
@@ -52,33 +52,33 @@ const Add = () => {
               autoFocus
               id="title"
               name="title"
-              className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full"
+              className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full text-2xl border-4"
               placeholder="Blog Title"
               value={newBlog.title}
               onChange={handleChange}
             />
           </div>
           <div className="my-5 text-sm">
-            <label htmlFor="categories" className="block text-black">
-              Categories
+            <label htmlFor="category" className="block text-black text-3xl">
+              Category
             </label>
             <input
               type="text"
-              id="categories"
-              name="categories"
-              className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full"
-              placeholder="Categories"
-              value={newBlog.categories}
+              id="category"
+              name="category"
+              className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full text-2xl border-4"
+              placeholder="category"
+              value={newBlog.category}
               onChange={handleChange}
             />
-            <label htmlFor="content" className="block text-black">
+            <label htmlFor="content" className="block text-black text-3xl">
               Content
             </label>
             <textarea
               type="text"
               id="content"
               name="content"
-              className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full"
+              className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full border-4"
               value={newBlog.content}
               onChange={handleChange}
             />

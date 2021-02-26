@@ -9,10 +9,6 @@ export default async (req, res) => {
       res.status(500).send('error retrieving blog posts')
     }
 
-    if (!posts.length) {
-      res.status(204).send('no blog posts found')
-    }
-
     res
       .status(200)
       .json({ posts: posts.map(post => post.toObject({ getters: true })) })
