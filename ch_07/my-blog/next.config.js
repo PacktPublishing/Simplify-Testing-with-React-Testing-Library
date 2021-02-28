@@ -1,5 +1,5 @@
 require('dotenv').config()
 
 module.exports = {
-  env: { baseURL: process.env.BASE_URL, mongodb: process.env.MONGODB_URI }
+  env: { mongodb: process.env.MONGODB_URI }
 }
