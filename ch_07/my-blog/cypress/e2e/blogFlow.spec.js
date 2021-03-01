@@ -1,4 +1,7 @@
 import post from '../support/generateBlogPost'
+import { addPage } from './pages/AddPage'
+import { homePage } from './pages/HomePage'
+import { postDetailPage } from './pages/PostDetailPage'
 
 describe('Blog Flow', () => {
   it('allows a user to create and delete a new blog post', () => {
@@ -15,5 +18,21 @@ describe('Blog Flow', () => {
     cy.findByRole('link', { name: post.title }).click()
     cy.findByText(/delete post>/i).click()
     cy.findByRole('link', { name: post.title }).should('not.exist')
+  })
+
+  it('POM: allows a user to create and delete a new blog post', () => {
+    homePage.navigateToHomePage()
+    homePage.navigateToAddPage()
+    addPage.createNewPost(post)
+    homePage.getBlogPost(post).should('be.visible')
+  })
+
+  it('POM: allows a user to delete a new blog post', () => {
+    homePage.navigateToHomePage()
+    homePage.navigateToAddPage()
+    addPage.createNewPost(post)
+    homePage.getBlogPost(post).should('be.visible')
+    homePage.navigateToPostDetail(post)
+    postDetailPage.deletePost()
   })
 })
