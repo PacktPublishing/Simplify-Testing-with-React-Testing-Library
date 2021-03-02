@@ -37,8 +37,8 @@ Cypress.Commands.add('createBlogPost', post => {
   Comment out the above lines when you want to experiment 
   with the request object to create new posts
   */
-  cy.request('POST', '/add', post).then(response => {
-    expect(response.message).to.equal(
+  cy.request('POST', '/api/add', post).then(response => {
+    expect(response.body.message).to.equal(
       `The blog "${post.title}" was successfully added`
     )
   })

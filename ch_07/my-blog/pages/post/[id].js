@@ -32,7 +32,7 @@ export default function Post() {
     const res = await fetch(`/api/delete/${data.post.id}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: data.post.id, name: data.post.title })
+      body: JSON.stringify({ id: data.post.id, title: data.post.title })
     })
 
     if (res.status === 200) {

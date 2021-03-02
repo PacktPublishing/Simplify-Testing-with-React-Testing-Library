@@ -14,6 +14,6 @@ export default async (req, res) => {
     } catch (error) {
       res.status(400).send()
     }
-    res.status(200).json({ message: `post ${title} successfully deleted` })
+    res.status(200).json({ message: `post "${title}" successfully deleted` })
   }
 }
