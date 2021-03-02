@@ -20,7 +20,7 @@ describe('Blog Flow', () => {
     cy.findByRole('link', { name: post.title }).should('not.exist')
   })
 
-  it('POM: allows a user to create and delete a new blog post', () => {
+  it('POM: allows a user to create a new blog post', () => {
     homePage.navigateToHomePage()
     homePage.navigateToAddPage()
     addPage.createNewPost(post)
@@ -31,8 +31,15 @@ describe('Blog Flow', () => {
     homePage.navigateToHomePage()
     homePage.navigateToAddPage()
     addPage.createNewPost(post)
-    homePage.getBlogPost(post).should('be.visible')
     homePage.navigateToPostDetail(post)
     postDetailPage.deletePost()
+    homePage.getBlogPost(post).should('not.exist')
+  })
+
+  it('Custom Command: allows a user to delete a new blog post', () => {
+    cy.createBlogPost(post)
+    homePage.navigateToPostDetail(post)
+    postDetailPage.deletePost()
+    homePage.getBlogPost(post).should('not.exist')
   })
 })
