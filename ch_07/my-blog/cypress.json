@@ -1,5 +1,6 @@
 {
   "baseUrl": "http://localhost:3000",
   "integrationFolder": "cypress/e2e",
-  "video": false
+  "video": false,
+  "testFiles": "**/*.feature"
 }
