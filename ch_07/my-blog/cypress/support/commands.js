@@ -26,11 +26,20 @@
 import '@testing-library/cypress/add-commands'
 
 Cypress.Commands.add('createBlogPost', post => {
-  cy.visit('/')
-  cy.findByRole('link', { name: /new post/i }).click()
-  cy.findByRole('textbox', { name: /title/i }).type(post.title)
-  cy.findByRole('textbox', { name: /category/i }).type(post.category)
-  cy.findByRole('textbox', { name: /image link/i }).type(post.image_url)
-  cy.findByRole('textbox', { name: /content/i }).type(post.content)
-  cy.findByRole('button', { name: /submit/i }).click()
+  // cy.visit('/')
+  // cy.findByRole('link', { name: /new post/i }).click()
+  // cy.findByRole('textbox', { name: /title/i }).type(post.title)
+  // cy.findByRole('textbox', { name: /category/i }).type(post.category)
+  // cy.findByRole('textbox', { name: /image link/i }).type(post.image_url)
+  // cy.findByRole('textbox', { name: /content/i }).type(post.content)
+  // cy.findByRole('button', { name: /submit/i }).click()
+  /*
+  Comment out the above lines when you want to experiment 
+  with the request object to create new posts
+  */
+  cy.request('POST', '/add', post).then(response => {
+    expect(response.message).to.equal(
+      `The blog "${post.title}" was successfully added`
+    )
+  })
 })

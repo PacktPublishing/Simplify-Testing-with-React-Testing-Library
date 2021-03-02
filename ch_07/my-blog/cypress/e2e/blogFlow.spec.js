@@ -42,4 +42,12 @@ describe('Blog Flow', () => {
     postDetailPage.deletePost()
     homePage.getBlogPost(post).should('not.exist')
   })
+
+  it('Custom API Command: allows a user to delete a new blog post', () => {
+    cy.createBlogPost(post)
+    homePage.navigateToHomePage()
+    homePage.navigateToPostDetail(post)
+    postDetailPage.deletePost()
+    homePage.getBlogPost(post).should('not.exist')
+  })
 })
