@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "devtools": "react-devtools"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -30,6 +31,7 @@
     "faker": "^5.4.0",
     "postcss": "^8.2.6",
     "prettier": "^2.2.1",
+    "react-devtools": "^4.10.1",
     "tailwindcss": "^2.0.3"
   },
   "cypress-cucumber-preprocessor": {
