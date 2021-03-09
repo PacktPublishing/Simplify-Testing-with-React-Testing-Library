@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "wallabyjs.wallaby-vscode",
+    "formulahendry.auto-rename-tag"
+  ]
+}
