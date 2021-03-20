@@ -1,10 +1,10 @@
 import faker from 'faker'
 
-const post = {
+const fakePost = {
   title: faker.lorem.sentence(),
   category: faker.lorem.word(),
   content: faker.lorem.paragraphs(1),
   image_url: faker.image.image()
 }
 
-export default post
+export default fakePost

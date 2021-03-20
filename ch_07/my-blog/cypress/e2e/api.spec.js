@@ -33,7 +33,7 @@ describe('API', () => {
       .should('be.equal', `The blog "${post.title}" was successfully added`)
   })
 
-  it('should allow a user to delete a blog post', () => {
+  it.only('should allow a user to delete a blog post', () => {
     cy.request('POST', '/api/add', post)
 
     getAllPosts().each(post =>
@@ -42,8 +42,12 @@ describe('API', () => {
           id: post.id,
           title: post.title
         })
-        .its('body.message')
-        .should('equal', `post "${post.title}" successfully deleted`)
+        .then(response => {
+          expect(response.status).equal(200)
+          expect(response.body.message).equal(
+            `post "${post.title}" successfully deleted`
+          )
+        })
     )
   })
 
