@@ -1,10 +1,10 @@
 import user from '@testing-library/user-event'
 import Retail from './Retail'
-import { render, screen, testStore } from './utils/test-utils'
+import { fakeStore, render, screen } from './utils/test-utils'
 
 describe('Integration: Retail', () => {
   function addFirstItemToCart() {
-    const firstProduct = testStore.retail.products[0]
+    const firstProduct = fakeStore.retail.products[0]
     const firstProductTitle = screen.getByRole('heading', {
       name: firstProduct.title
     })
@@ -14,9 +14,9 @@ describe('Integration: Retail', () => {
   }
   describe('ProductDetails', () => {
     test('given selected product, details displayed', () => {
-      render(<Retail />, { initialState: testStore })
+      render(<Retail />, { initialState: fakeStore })
 
-      const firstProduct = testStore.retail.products[0]
+      const firstProduct = fakeStore.retail.products[0]
 
       user.click(
         screen.getByRole('heading', {
@@ -34,9 +34,9 @@ describe('Integration: Retail', () => {
     })
 
     test('given selected add to favorites, product added to favorites', () => {
-      render(<Retail />, { initialState: testStore })
+      render(<Retail />, { initialState: fakeStore })
 
-      const firstProduct = testStore.retail.products[0]
+      const firstProduct = fakeStore.retail.products[0]
 
       user.click(
         screen.getByRole('heading', {
@@ -54,7 +54,7 @@ describe('Integration: Retail', () => {
 
   describe('Cart', () => {
     test('given selected add to cart, product added to cart', () => {
-      render(<Retail />, { initialState: testStore })
+      render(<Retail />, { initialState: fakeStore })
 
       addFirstItemToCart()
 
@@ -62,7 +62,7 @@ describe('Integration: Retail', () => {
     })
 
     test('given new quantity for cart item, quantity updated', () => {
-      render(<Retail />, { initialState: testStore })
+      render(<Retail />, { initialState: fakeStore })
       addFirstItemToCart()
       const quantityInput = screen.getByRole('spinbutton')
 
@@ -74,7 +74,7 @@ describe('Integration: Retail', () => {
     })
 
     test('given quantity greater than 10, quantity not accepted', () => {
-      render(<Retail />, { initialState: testStore })
+      render(<Retail />, { initialState: fakeStore })
       addFirstItemToCart()
       const quantityInput = screen.getByRole('spinbutton')
 
@@ -86,7 +86,7 @@ describe('Integration: Retail', () => {
     })
 
     test('given quantity less than 1, quantity not accepted', () => {
-      render(<Retail />, { initialState: testStore })
+      render(<Retail />, { initialState: fakeStore })
       addFirstItemToCart()
       const quantityInput = screen.getByRole('spinbutton')
 

@@ -4,7 +4,7 @@ import faker from 'faker'
 import { Provider } from 'react-redux'
 import retailReducer from '../retailSlice'
 
-const testStore = {
+const fakeStore = {
   retail: {
     products: [
       {
@@ -48,4 +48,5 @@ function render(
 }
 
 export * from '@testing-library/react'
-export { render, testStore }
+export { render, fakeStore }
+
