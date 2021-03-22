@@ -28,7 +28,7 @@ const mocks = [
     }
   }
 ]
-describe('ExchangeRates', () => {
+describe('Table', () => {
   test('given initial render, returns loading message', () => {
     render(
       <MockedProvider mocks={mocks}>
