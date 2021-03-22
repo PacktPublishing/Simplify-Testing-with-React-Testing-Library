@@ -52,7 +52,7 @@ function useRetail() {
   const context = React.useContext(RetailContext)
 
   if (!context) {
-    throw new Error('useRetail be used within the RetailProvider')
+    throw new Error('useRetail must be used within the RetailProvider')
   }
   const [state, dispatch] = context
 
