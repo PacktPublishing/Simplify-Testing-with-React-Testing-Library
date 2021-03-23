@@ -6,6 +6,7 @@ const [firstResult] = employees
 
 it('Table, given data, renders table rows', () => {
   render(<Table employees={[firstResult]} />)
+
   expect(
     screen.getByRole('cell', { name: firstResult.name })
   ).toBeInTheDocument()
