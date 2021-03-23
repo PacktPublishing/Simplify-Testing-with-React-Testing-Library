@@ -37,6 +37,7 @@ describe('Table', () => {
     )
     expect(screen.getByText(/Loading.../)).toBeInTheDocument()
   })
+
   test('given completed state, renders employee data', async () => {
     render(
       <MockedProvider mocks={mocks}>
@@ -58,6 +59,6 @@ describe('Table', () => {
     )
     await act(() => new Promise(resolve => setTimeout(resolve, 0)))
 
-    expect(screen.getByText(/Error/i)).toBeInTheDocument()
+    expect(screen.getByText(/error/i)).toBeInTheDocument()
   })
 })

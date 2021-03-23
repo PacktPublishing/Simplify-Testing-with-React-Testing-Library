@@ -1,49 +1,42 @@
 const { GraphQLServer } = require('graphql-yoga')
 
-const sampleRates = [
+const fakeEmployeeDB = [
   {
-    currency: 'AAVE',
-    rate: '0.00537309423064007',
-    name: null
+    id: 1,
+    name: 'John Doe',
+    department: 'Financial',
+    title: 'Loan Officer'
   },
   {
-    currency: 'AED',
-    rate: '3.67298',
-    name: 'United Arab Emirates Dirham'
+    id: 2,
+    name: 'Sam Jones',
+    department: 'Engineering',
+    title: 'Engineering Manager'
   },
   {
-    currency: 'AFN',
-    rate: '77.383416',
-    name: 'Afghan Afghani'
+    id: 3,
+    name: 'Amanda Sims',
+    department: 'Human Resources',
+    title: 'Manager'
   }
 ]
 
 const typeDefs = `
 type Query {
-  rates: [ExchangeRate]
+  employees: [Employee]
 }
 
-type Mutation {
-  createExchangeRate(currency: String!, rate: String!, name: String!): ExchangeRate
-}
-
-type ExchangeRate {
-  currency: String
-  rate: String
+type Employee {
+  id: String
   name: String
+  department: String
+  title: String
 }
 `
 
 const resolvers = {
   Query: {
-    rates: () => sampleRates
-  },
-  Mutation: {
-    createExchangeRate: (parent, args) => {
-      args.id = 100
-      sampleRates.push(args)
-      return args
-    }
+    employees: () => fakeEmployeeDB
   }
 }
 
