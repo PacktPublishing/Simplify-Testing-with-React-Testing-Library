@@ -3,19 +3,25 @@ import { useRetail } from './RetailContext'
 const Product = ({ title, price, image, id }) => {
   const { getDetails } = useRetail()
   return (
-    <div className="col-lg-4 mb-2">
+    <div className="col-4 mb-2">
       <div onClick={() => getDetails(id)} className="card shadow">
         <img
           className="m-auto"
-          style={{ width: '15rem', height: '16rem' }}
+          style={{ width: '12rem', height: '12rem' }}
           src={image}
           alt={title}
         />
         <div className="card-body">
-          <h5 data-testid="product-title" className="card-title">
+          <h5
+            style={{ fontSize: '0.9rem' }}
+            data-testid="product-title"
+            className="card-title"
+          >
             {title}
           </h5>
-          <p className="card-text">${price}</p>
+          <p style={{ fontSize: '0.9rem' }} className="card-text">
+            ${price}
+          </p>
         </div>
       </div>
     </div>

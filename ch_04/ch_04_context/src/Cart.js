@@ -13,7 +13,7 @@ const Cart = () => {
       .toFixed(2)
 
   return (
-    <div className="col-lg-4" style={{ marginBottom: '2rem' }}>
+    <div className="col-4" style={{ marginBottom: '2rem' }}>
       <h4>
         <span className="text-black">
           <i className="material-icons">shopping_cart</i>
@@ -22,11 +22,16 @@ const Cart = () => {
       </h4>
       {cartItems.map(item => {
         return (
-          <p key={item.id}>
+          <p key={item.id} style={{ fontSize: '0.7rem' }}>
             <span className="text-black font-weight-bold">
               Qty:{item.quantity}{' '}
             </span>
-            <span className="text-primary font-weight-bold">${item.price}</span>{' '}
+            <span
+              style={{ fontSize: '0.7rem' }}
+              className="text-primary font-weight-bold"
+            >
+              ${item.price}
+            </span>{' '}
             {item.title}
           </p>
         )
