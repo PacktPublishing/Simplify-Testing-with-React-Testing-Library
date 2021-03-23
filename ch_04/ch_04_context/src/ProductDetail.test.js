@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react'
-import testProducts from './mocks/testProducts'
+import fakeProducts from './mocks/fakeProducts'
 import ProductDetail from './ProductDetail'
 import { RetailProvider } from './RetailContext'
 
 test('ProductDetail, given initial render, displays Placeholder component', () => {
   render(
-    <RetailProvider products={testProducts}>
+    <RetailProvider products={fakeProducts}>
       <ProductDetail />
     </RetailProvider>
   )

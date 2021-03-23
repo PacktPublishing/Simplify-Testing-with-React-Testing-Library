@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react'
 import Cart from './Cart'
-import testProducts from './mocks/testProducts'
+import fakeProducts from './mocks/fakeProducts'
 import { RetailProvider } from './RetailContext'
 
 test('Cart, given initial render, returns empty cart', () => {
   render(
-    <RetailProvider products={testProducts}>
+    <RetailProvider products={fakeProducts}>
       <Cart />
     </RetailProvider>
   )

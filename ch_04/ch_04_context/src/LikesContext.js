@@ -49,7 +49,7 @@ function useLikes() {
   const context = React.useContext(LikesContext)
 
   if (!context) {
-    throw new Error('useLikes be used within the LikesProvider')
+    throw new Error('useLikes be used used within the LikesProvider')
   }
   const [state, dispatch] = context
 

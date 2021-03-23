@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react'
-import testProducts from './mocks/testProducts'
+import fakeProducts from './mocks/fakeProducts'
 import ProductList from './ProductList'
 import { RetailProvider } from './RetailContext'
 
 test('Integration: ProductList, given initial render, all products displayed', () => {
   render(
-    <RetailProvider products={testProducts}>
+    <RetailProvider products={fakeProducts}>
       <ProductList />
     </RetailProvider>
   )
@@ -13,7 +13,7 @@ test('Integration: ProductList, given initial render, all products displayed', (
   const actual = screen
     .getAllByTestId('product-title')
     .map(product => product.textContent)
-  const expected = testProducts.map(product => product.title)
+  const expected = fakeProducts.map(product => product.title)
 
   expect(actual).toEqual(expected)
 })

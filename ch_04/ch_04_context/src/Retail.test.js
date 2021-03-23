@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import user from '@testing-library/user-event'
 import { ErrorBoundary } from 'react-error-boundary'
-import testProducts from './mocks/testProducts'
+import fakeProducts from './mocks/fakeProducts'
 import Retail from './Retail'
 import { RetailProvider } from './RetailContext'
 
@@ -25,7 +25,7 @@ test('Retail must be rendered within Context Provider', () => {
 
 describe('Integration: Product Details', () => {
   function addFirstItemToCart() {
-    const firstProduct = testProducts[1]
+    const firstProduct = fakeProducts[1]
     const firstProductTitle = screen.getByRole('heading', {
       name: firstProduct.title
     })
@@ -36,11 +36,11 @@ describe('Integration: Product Details', () => {
 
   test('A user can view product details', () => {
     render(
-      <RetailProvider products={testProducts}>
+      <RetailProvider products={fakeProducts}>
         <Retail />
       </RetailProvider>
     )
-    const firstProduct = testProducts[0]
+    const firstProduct = fakeProducts[0]
 
     user.click(
       screen.getByRole('heading', {
@@ -59,7 +59,7 @@ describe('Integration: Product Details', () => {
 
   test('A user can add a product to the cart', () => {
     render(
-      <RetailProvider products={testProducts}>
+      <RetailProvider products={fakeProducts}>
         <Retail />
       </RetailProvider>
     )
@@ -70,7 +70,7 @@ describe('Integration: Product Details', () => {
 
   test('A user can update the quantity for cart items', () => {
     render(
-      <RetailProvider products={testProducts}>
+      <RetailProvider products={fakeProducts}>
         <Retail />
       </RetailProvider>
     )
@@ -85,7 +85,7 @@ describe('Integration: Product Details', () => {
 
   test('A user cannot submit a quantity greater than 10', () => {
     render(
-      <RetailProvider products={testProducts}>
+      <RetailProvider products={fakeProducts}>
         <Retail />
       </RetailProvider>
     )
@@ -100,7 +100,7 @@ describe('Integration: Product Details', () => {
 
   test('A user cannot submit a quantity less than 1', () => {
     render(
-      <RetailProvider products={testProducts}>
+      <RetailProvider products={fakeProducts}>
         <Retail />
       </RetailProvider>
     )
@@ -115,12 +115,12 @@ describe('Integration: Product Details', () => {
 
   test('A user can add an item to favorites', () => {
     render(
-      <RetailProvider products={testProducts}>
+      <RetailProvider products={fakeProducts}>
         <Retail />
       </RetailProvider>
     )
 
-    const firstProduct = testProducts[1]
+    const firstProduct = fakeProducts[1]
     const firstProductTitle = screen.getByRole('heading', {
       name: firstProduct.title
     })

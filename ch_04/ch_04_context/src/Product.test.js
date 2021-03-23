@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import faker from 'faker'
-import testProducts from './mocks/testProducts'
+import fakeProducts from './mocks/fakeProducts'
 import Product from './Product'
 import { RetailProvider } from './RetailContext'
 
@@ -12,7 +12,7 @@ test('Product, given product properties, renders to screen', () => {
   }
 
   render(
-    <RetailProvider products={testProducts}>
+    <RetailProvider products={fakeProducts}>
       <Product
         title={product.title}
         price={product.price}

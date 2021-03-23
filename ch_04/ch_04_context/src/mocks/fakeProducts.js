@@ -1,6 +1,6 @@
 import faker from 'faker'
 
-const testProducts = [
+const fakeProducts = [
   {
     id: faker.random.uuid(),
     title: faker.commerce.productName(),
@@ -19,4 +19,4 @@ const testProducts = [
   }
 ]
 
-export default testProducts
+export default fakeProducts
