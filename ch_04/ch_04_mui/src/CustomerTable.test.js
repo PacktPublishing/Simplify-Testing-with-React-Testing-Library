@@ -3,7 +3,7 @@ import user from '@testing-library/user-event'
 import CustomerTable from './CustomerTable'
 
 describe('CustomerTable', () => {
-  const testData = [
+  const fakeCustomers = [
     {
       id: 1,
       name: 'John Doe',
@@ -30,13 +30,13 @@ describe('CustomerTable', () => {
     }
   ]
   test('given data, renders table rows', () => {
-    render(<CustomerTable data={testData} />)
+    render(<CustomerTable data={fakeCustomers} />)
 
     expect(screen.getAllByTestId('row').length).toEqual(3)
   })
 
   test('given single-matching query, single result returned', () => {
-    render(<CustomerTable data={testData} />)
+    render(<CustomerTable data={fakeCustomers} />)
     const searchBox = screen.getByRole('textbox')
 
     user.type(searchBox, 'john')
@@ -44,7 +44,7 @@ describe('CustomerTable', () => {
   })
 
   test('given multi-matching query, multiple results returned', () => {
-    render(<CustomerTable data={testData} />)
+    render(<CustomerTable data={fakeCustomers} />)
     const searchBox = screen.getByRole('textbox')
 
     user.type(searchBox, 'doe')
@@ -56,7 +56,7 @@ describe('CustomerTable', () => {
   })
 
   test('given non-matching query, no results returned', () => {
-    render(<CustomerTable data={testData} />)
+    render(<CustomerTable data={fakeCustomers} />)
     const searchBox = screen.getByRole('textbox')
 
     user.type(searchBox, 'zzz')
