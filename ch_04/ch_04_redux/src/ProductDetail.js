@@ -37,16 +37,17 @@ const Details = props => {
   }, [props])
 
   return (
-    <div className="jumbotron col-lg-8 text-center p-4">
+    <div className="jumbotron col-8 text-center p-4">
       <div className="d-flex">
         <img
-          className="card-img-top w-25"
+          className="card-img-top"
+          style={{ width: '12rem' }}
           src={props.image}
           alt={props.title}
         />
         <div>
-          <h1>{props.title}</h1>
-          <p className="lead">{props.description}</p>
+          <h1 style={{ fontSize: '1.5rem' }}>{props.title}</h1>
+          <p style={{ fontSize: '0.9rem' }}>{props.description}</p>
           <h3 className="card-text text-success">${props.price}</h3>
         </div>
       </div>
@@ -92,7 +93,7 @@ const Details = props => {
 
 const PlaceholderDetails = () => {
   return (
-    <div className="jumbotron col-lg-8 text-center">
+    <div className="jumbotron col-8 text-center">
       <h1>Retail Store</h1>
     </div>
   )
