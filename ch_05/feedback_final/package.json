@@ -6,10 +6,10 @@
     "@craco/craco": "^6.1.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "11.2.5",
-    "@testing-library/user-event": "^12.8.3",
+    "@testing-library/user-event": "^13.0.10",
     "formik": "^2.2.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
@@ -38,13 +38,13 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "^9.8.6",
     "eslint-plugin-jest-dom": "^3.6.5",
-    "eslint-plugin-testing-library": "^3.10.1",
+    "eslint-plugin-testing-library": "^3.10.2",
     "faker": "^5.4.0",
     "postcss": "^7.0.35",
     "prettier": "^2.2.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
   }
 }
