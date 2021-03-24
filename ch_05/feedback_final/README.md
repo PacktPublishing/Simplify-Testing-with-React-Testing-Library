@@ -30,7 +30,7 @@ npm --version
 
 ## Setup
 
-- Chapter 4 consists of multiple "mini" projects. We recommend opening the specific folder for a project in your text editor and not the top-level parent folder containing all chapter projects.
+- Chapter 5 consists of multiple "mini" projects. We recommend opening the specific folder for a project in your text editor and not the top-level parent folder containing all chapter projects.
 
 ```bash
 npm install
