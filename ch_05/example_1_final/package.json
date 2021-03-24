@@ -4,9 +4,9 @@
   "private": true,
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.2",
-    "react-scripts": "4.0.1"
+    "@testing-library/react": "11.2.5",
+    "@testing-library/user-event": "^13.0.10",
+    "react-scripts": "4.0.3"
   },
   "homepage": ".",
   "dependencies": {
@@ -14,7 +14,7 @@
     "@material-ui/icons": "^4.11.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "recharts": "^2.0.4",
+    "recharts": "^2.0.9",
     "uuid": "^3.3.2"
   },
   "scripts": {
