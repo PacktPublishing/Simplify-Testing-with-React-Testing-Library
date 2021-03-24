@@ -1,23 +1,69 @@
-# API routes with REST
+<style>
+  i {
+      color:red;
+  }
+</style>
+<div>
+  <h1 align="center">Simplify Testing with React Testing Library
+  </h1>
+  <strong> 
+  Code examples for Chapter 7 - UI End-to-End Testing with Cypress
+  </strong>
+  <h2>
+  Mini Project: <i>My Blog</i>
+  </h2>
+</div>
 
-Next.js ships with [API routes](https://github.com/vercel/next.js#api-routes), which provide an easy solution to build your own `API`. This example shows how it can be used to create your [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) `API`.
+## System Requirements
 
-## Deploy your own
+- [npm](https://www.npmjs.com/)
+- [node](https://nodejs.org)
+- [git](https://git-scm.com/)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/api-routes-rest&project-name=api-routes-rest&repository-name=api-routes-rest)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Use the following commands to verify required tooling:
 
 ```bash
-npx create-next-app --example api-routes-rest api-routes-rest-app
-# or
-yarn create next-app --example api-routes-rest api-routes-rest-app
+git --version
+node --version
+npm --version
 ```
 
-### Deploy to Now
+## Setup
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- Chapter 7 consists of multiple "mini" projects. We recommend opening the specific folder for a project in your text editor and not the top-level parent folder containing all chapter projects.
+
+```bash
+npm install
+```
+
+### Database
+
+- Create a `.env.local` file at the project of the project and add credentials for your MongoDB Database:
+
+```bash
+MONGODB_URI="database credentials here"
+```
+
+- Note: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is a free tool to quickly create a database
+
+## Running the project
+
+```bash
+npm run dev
+```
+
+## Running the tests
+
+- Be sure your development server is running before running Cypress tests.
+
+### Run tests in interactive mode
+
+```bash
+npm e2e:open
+```
+
+### Run tests in headless mode
+
+```bash
+npm cy:run
+```
