@@ -11,28 +11,28 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "mongoose": "5.11.15",
+    "mongoose": "5.12.2",
     "mongoose-unique-validator": "^2.0.3",
     "next": "latest",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "swr": "^0.4.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "swr": "^0.5.4"
   },
   "license": "MIT",
   "devDependencies": {
     "@testing-library/cypress": "^7.0.4",
-    "autoprefixer": "^10.2.4",
+    "autoprefixer": "^10.2.5",
     "clear": "^0.1.0",
     "cypress": "^6.8.0",
-    "cypress-cucumber-preprocessor": "^4.0.1",
+    "cypress-cucumber-preprocessor": "^4.0.3",
     "eslint": "^7.20.0",
     "eslint-plugin-cypress": "^2.11.2",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react": "^7.23.1",
     "faker": "^5.4.0",
     "postcss": "^8.2.6",
     "prettier": "^2.2.1",
     "react-devtools": "^4.10.1",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.0.4"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,

@@ -41,7 +41,7 @@ const Add = () => {
   return (
     <>
       <CustomHead title="Add" />
-      <main className="md:6/12 lg:w-8/12 m-auto pb-10">
+      <main className="m-auto pb-10 w-10/12">
         <h1 className="text-4xl text-center">Add a new blog</h1>{' '}
         <form onSubmit={handleSubmit}>
           <div className="my-5 text-sm">

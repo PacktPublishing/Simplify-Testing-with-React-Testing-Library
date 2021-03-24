@@ -20,7 +20,7 @@ const Nav = () => {
           </Link>
         </div>
         <div className="flex-grow lg:mt-0 lg:w-auto">
-          <ul className="justify-end lg:flex">
+          <ul className="text-right">
             <li className="mr-3">
               <Link href="/add">
                 <a className="font-bold inline-block px-4 py-2 text-3xl">
