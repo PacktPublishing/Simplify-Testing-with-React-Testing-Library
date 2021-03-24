@@ -5,12 +5,12 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2",
-    "web-vitals": "^1.1.0"
+    "@testing-library/react": "11.2.5",
+    "@testing-library/user-event": "^13.0.12",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^7.0.4",
-    "cypress": "^6.5.0",
+    "cypress": "^6.8.0",
     "eslint-plugin-cypress": "^2.11.2",
     "faker": "^5.4.0"
   }
