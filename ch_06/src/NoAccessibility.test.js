@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import { axe } from 'jest-axe'
-// Note: hte next line of code is globally included for all tests via setupTests.js
+// Note: the next line of code is globally included for all tests via setupTests.js
 //import 'jest-axe/extend-expect'
 import NoAccessibility from './NoAccessibility'
 
