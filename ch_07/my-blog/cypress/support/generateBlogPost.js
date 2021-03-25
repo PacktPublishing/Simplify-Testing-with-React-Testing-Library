@@ -1,10 +1,11 @@
 import faker from 'faker'
 
-const fakePost = {
-  title: faker.lorem.sentence(),
-  category: faker.lorem.word(),
-  content: faker.lorem.paragraphs(1),
-  image_url: faker.image.image()
+const fakePost = () => {
+  return {
+    title: faker.lorem.sentence(),
+    category: faker.lorem.word(),
+    content: faker.lorem.paragraphs(1),
+    image_url: faker.image.image()
+  }
 }
-
 export default fakePost

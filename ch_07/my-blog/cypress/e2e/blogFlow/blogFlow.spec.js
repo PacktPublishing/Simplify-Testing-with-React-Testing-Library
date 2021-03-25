@@ -1,6 +1,7 @@
 import { Given, Then, When } from 'cypress-cucumber-preprocessor/steps'
 import post from '../../support/generateBlogPost'
-const currentPost = post
+const currentPost = post()
+
 Given('I am on the home page', () => {
   cy.visit('/')
 })
@@ -30,6 +31,7 @@ When('I click the blog post name link', () => {
 
 When('I click the delete link', () => {
   cy.findByText(/delete post>/i).click()
+  cy.visit('/')
 })
 
 Then('the post is removed from the home page', () => {

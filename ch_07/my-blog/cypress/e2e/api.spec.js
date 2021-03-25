@@ -1,4 +1,5 @@
-import post from '../support/generateBlogPost'
+import fakePost from '../support/generateBlogPost'
+const post = fakePost()
 
 describe('API', () => {
   const getAllPosts = () => cy.request('/api/posts').its('body.posts')
@@ -33,7 +34,7 @@ describe('API', () => {
       .should('be.equal', `The blog "${post.title}" was successfully added`)
   })
 
-  it.only('should allow a user to delete a blog post', () => {
+  it('should allow a user to delete a blog post', () => {
     cy.request('POST', '/api/add', post)
 
     getAllPosts().each(post =>

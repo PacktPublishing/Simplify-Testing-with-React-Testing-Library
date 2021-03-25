@@ -1,6 +1,7 @@
 class PostDetailPage {
   deletePost() {
     cy.findByText(/delete post>/i).click()
+    cy.visit('/')
   }
 }
 
