@@ -1,0 +1,15 @@
+{
+  "extends": ["react-app"],
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "extends": [
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended"
+      ],
+      "rules": {
+        "testing-library/prefer-screen-queries": "error"
+      }
+    }
+  ]
+}
