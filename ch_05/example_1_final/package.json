@@ -1,0 +1,32 @@
+{
+  "name": "the-budget-app",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "11.2.5",
+    "@testing-library/user-event": "^13.0.10",
+    "react-scripts": "4.0.3"
+  },
+  "homepage": ".",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "recharts": "^2.0.9",
+    "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
