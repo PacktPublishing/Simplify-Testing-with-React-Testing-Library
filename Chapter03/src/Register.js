@@ -1,5 +1,10 @@
+import PropTypes from 'prop-types'
 import * as React from 'react'
-
+/* 
+  Note: When rendering the Register component, create an ananomyous function
+  to resolve the handleRegister dependency. Here is an example:
+  <Register handleRegister={values => console.log(values)} />
+*/
 const Register = props => {
   const [values, setValues] = React.useState({
     email: '',
@@ -14,7 +19,6 @@ const Register = props => {
   const handleSubmit = event => {
     event.preventDefault()
     props.handleRegister(values)
-    //console.log(values)
   }
 
   return (
@@ -51,3 +55,7 @@ const Register = props => {
 }
 
 export default Register
+
+Register.propTypes = {
+  handleRegister: PropTypes.func.isRequired
+}

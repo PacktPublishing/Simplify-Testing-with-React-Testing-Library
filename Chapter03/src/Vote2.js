@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import * as React from 'react'
 import thumbsDown from './images/thumbs-down.svg'
 import thumbsUp from './images/thumbs-up.svg'
@@ -49,6 +50,10 @@ const Vote = ({ totalGlobalLikes }) => {
       />
     </div>
   )
+}
+
+Vote.propTypes = {
+  totalGlobalLikes: PropTypes.number.isRequired
 }
 
 export default Vote

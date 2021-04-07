@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import * as React from 'react'
 
 export default class Register extends React.Component {
@@ -53,4 +54,8 @@ export default class Register extends React.Component {
       </main>
     )
   }
+}
+
+Register.propTypes = {
+  handleRegister: PropTypes.func.isRequired
 }
