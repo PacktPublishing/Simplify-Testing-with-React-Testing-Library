@@ -1,6 +1,7 @@
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
+import PropTypes from 'prop-types'
 import React from 'react'
 
 const AddressForm = ({ formValues, setFormValues }) => {
@@ -99,6 +100,11 @@ const AddressForm = ({ formValues, setFormValues }) => {
       </Grid>
     </>
   )
+}
+
+AddressForm.propTypes = {
+  formValues: PropTypes.objectOf(PropTypes.string).isRequired,
+  setFormValues: PropTypes.func
 }
 
 export default AddressForm

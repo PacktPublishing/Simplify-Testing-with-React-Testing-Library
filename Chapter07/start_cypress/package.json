@@ -42,6 +42,7 @@
     "@testing-library/cypress": "^7.0.4",
     "cypress": "^6.8.0",
     "eslint-plugin-cypress": "^2.11.2",
-    "faker": "^5.4.0"
+    "faker": "^5.4.0",
+    "prop-types": "^15.7.2"
   }
 }
