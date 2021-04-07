@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { showDetails } from './retailSlice'
+
 const Product = ({ title, price, image, id }) => {
   const dispatch = useDispatch()
   return (
@@ -26,6 +28,13 @@ const Product = ({ title, price, image, id }) => {
       </div>
     </div>
   )
+}
+
+Product.propTypes = {
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 }
 
 export default Product

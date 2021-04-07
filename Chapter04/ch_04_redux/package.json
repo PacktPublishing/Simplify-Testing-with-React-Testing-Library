@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "faker": "^5.4.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "prop-types": "^15.7.2"
   }
 }

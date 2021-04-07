@@ -1,5 +1,3 @@
-import DrinkSearch from './DrinkSearch'
-//import Vote from './Vote'
-const App = () => <DrinkSearch />
+const App = () => <h1>Replace me with chapter related components </h1>
 
 export default App

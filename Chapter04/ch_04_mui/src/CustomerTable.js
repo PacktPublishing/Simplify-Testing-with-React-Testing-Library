@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import TextField from '@material-ui/core/TextField'
+import PropTypes from 'prop-types'
 import * as React from 'react'
 
 const CustomerTable = ({ data }) => {
@@ -69,6 +70,19 @@ const CustomerTable = ({ data }) => {
       </TableContainer>
     </>
   )
+}
+
+CustomerTable.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      address: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired
+    })
+  ).isRequired
 }
 
 export default CustomerTable

@@ -45,7 +45,7 @@ describe('Integration: DrinkSearch', () => {
     user.type(searchInput, 'vodka, {enter}')
 
     expect(
-      await screen.findByRole('heading', { name: /🍹 no drinks found 🍹/i })
+      await screen.findByRole('heading', { name: /no drinks found/i })
     ).toBeInTheDocument()
   })
 
@@ -64,7 +64,7 @@ describe('Integration: DrinkSearch', () => {
     user.type(searchInput, 'vodka, {enter}')
 
     expect(
-      await screen.findByRole('heading', { name: /🛑 Service unavailable 🛑/i })
+      await screen.findByRole('heading', { name: /Service unavailable/i })
     ).toBeInTheDocument()
   })
 

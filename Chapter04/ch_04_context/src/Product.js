@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useRetail } from './RetailContext'
 
 const Product = ({ title, price, image, id }) => {
@@ -28,4 +29,10 @@ const Product = ({ title, price, image, id }) => {
   )
 }
 
+Product.propTypes = {
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
+}
 export default Product

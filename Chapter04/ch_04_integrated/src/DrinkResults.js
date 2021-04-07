@@ -1,3 +1,5 @@
+import PropTypes, { arrayOf } from 'prop-types'
+
 const DrinkResults = ({ drinks }) => {
   const ingredientList = drink => {
     const ingredients = []
@@ -35,6 +37,17 @@ const DrinkResults = ({ drinks }) => {
       </div>
     )
   })
+}
+
+DrinkResults.propTypes = {
+  drinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      idDrink: PropTypes.string.isRequired,
+      strDrinkThumb: PropTypes.string.isRequired,
+      strDrink: PropTypes.string.isRequired,
+      strInstructions: PropTypes.string.isRequired
+    })
+  ).isRequired
 }
 
 export default DrinkResults

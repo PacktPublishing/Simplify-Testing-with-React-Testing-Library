@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import ThumbDownAltIcon from '@material-ui/icons/ThumbDownAlt'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
+import PropTypes from 'prop-types'
 import * as React from 'react'
 
 const Vote = ({ totalGlobalLikes }) => {
@@ -86,6 +87,10 @@ const Vote = ({ totalGlobalLikes }) => {
       </Box>
     </div>
   )
+}
+
+Vote.propTypes = {
+  totalGlobalLikes: PropTypes.number.isRequired
 }
 
 export default Vote
