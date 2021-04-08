@@ -45,7 +45,7 @@ MONGODB_URI="database credentials here"
 ```
 
 - Note: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is a free tool to quickly create a database
-  - If you run into issues connecting to your database, you may also need to add your IP address to the [IP Access List Entries](https://docs.atlas.mongodb.com/security/ip-access-list/#std-label-access-list) to gain network access to the database
+  - If you run into issues connecting to your database, you may also need to add your computer's public IP address to the [IP Access List Entries](https://docs.atlas.mongodb.com/security/ip-access-list/#std-label-access-list) to gain network access to the database
 
 ## Running the project
 
