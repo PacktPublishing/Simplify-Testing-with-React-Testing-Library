@@ -38,7 +38,7 @@ npm install
 
 ### Database
 
-- Create a `.env.local` file at the project of the project and add credentials for your MongoDB Database:
+- Create a `.env.local` file at the root of the project folder and add credentials for your MongoDB Database:
 
 ```bash
 MONGODB_URI="database credentials here"

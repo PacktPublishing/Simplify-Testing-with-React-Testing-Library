@@ -6,6 +6,7 @@ import { RetailProvider } from './RetailContext'
 
 test('Product, given product properties, renders to screen', () => {
   const product = {
+    id: faker.random.uuid(),
     title: faker.commerce.productName(),
     price: faker.commerce.price(),
     image: faker.image.fashion()
@@ -14,6 +15,7 @@ test('Product, given product properties, renders to screen', () => {
   render(
     <RetailProvider products={fakeProducts}>
       <Product
+        id={product.id}
         title={product.title}
         price={product.price}
         image={product.image}
