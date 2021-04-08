@@ -5,12 +5,11 @@ export default async (req, res) => {
     let posts
     try {
       posts = await (await db()).models.Post.find({})
+      res
+        .status(200)
+        .json({ posts: posts.map(post => post.toObject({ getters: true })) })
     } catch (error) {
       res.status(500).send('error retrieving blog posts')
     }
-
-    res
-      .status(200)
-      .json({ posts: posts.map(post => post.toObject({ getters: true })) })
   }
 }
