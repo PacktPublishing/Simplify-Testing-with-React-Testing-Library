@@ -1,8 +1,4 @@
-<style>
-  i {
-      color:red;
-  }
-</style>
+
 <div>
   <h1 align="center">Simplify Testing with React Testing Library
   </h1>
