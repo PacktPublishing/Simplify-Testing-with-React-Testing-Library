@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import * as React from 'react'
 /* 
-  Note: When rendering the Register component, create an ananomyous function
+  Note: When rendering the Register component, create an anonymous function
   to resolve the handleRegister dependency. Here is an example:
   <Register handleRegister={values => console.log(values)} />
 */
