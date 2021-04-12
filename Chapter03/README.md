@@ -31,6 +31,8 @@ npm install
 npm start
 ```
 
+- Note: you will see the starter text "Replace me with chapter related components" when you initially run the app. Simply replace the text with any component in the chapter repo.
+
 ## Using The Real [CocktailDB API](https://www.thecocktaildb.com)
 
 - The default setup returns mock MSW server data for the `<DrinkSearch>` component. To access the real API data, comment out the following three lines inside index.js:

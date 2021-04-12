@@ -29,7 +29,7 @@ npm --version
 ```bash
 npm install
 ```
-
+- Note: you will see the starter text "Replace me with chapter related components" when you initially run the app. Simply replace the text with any component in the chapter repo. 
 ## Running the project
 
 ```bash
