@@ -61,6 +61,6 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * End-to-End Web Testing with Cypress [[Packt]](https://www.packtpub.com/product/automation-testing-with-cypress/9781839213854) [[Amazon]](https://www.amazon.com/dp/183921385X)
 
-## Get to Know the Author(s)
+## Get to Know the Author
 **Scottie Crump**
 is a senior test engineer with over four years' experience as a consultant working with clients from a variety of sectors, including automotive, retail, telecommunications, and healthcare, among others. Scottie has also worked with numerous students looking to break into the software industry at Coding Bootcamp settings. His background in quality and software engineering and education enables him to be a crucial cog in any client's project. Scottie has helped bring industry best practices and data-driven insights to support key business objectives.
