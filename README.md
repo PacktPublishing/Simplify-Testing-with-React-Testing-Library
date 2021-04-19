@@ -54,7 +54,7 @@ With the following software and hardware list you can run all code files present
 | 1 to 7       | Cypress Testing Library 7.0.4            | Windows, Mac OS X, and Linux (Any) |
 |1 to 7       | Cypress Cucumber Preprocessor 4.0.3            | Windows, Mac OS X, and Linux (Any) |
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it] (https://static.packt-cdn.com/downloads/9781800564459_ColorImages.pdf).
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800564459_ColorImages.pdf).
 
 ### Related products <Other books you may enjoy>
 * UI Testing with Puppeteer [[Packt]](https://www.packtpub.com/product/ui-testing-with-puppeteer/9781800206786) [[Amazon]](https://www.amazon.com/dp/180020678X)
