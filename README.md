@@ -64,7 +64,3 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 ## Get to Know the Author(s)
 **Scottie Crump**
 is a senior test engineer with over four years' experience as a consultant working with clients from a variety of sectors, including automotive, retail, telecommunications, and healthcare, among others. Scottie has also worked with numerous students looking to break into the software industry at Coding Bootcamp settings. His background in quality and software engineering and education enables him to be a crucial cog in any client's project. Scottie has helped bring industry best practices and data-driven insights to support key business objectives.
-
-## Other books by the authors
-* [Mastering Linux Network Administration](https://www.packtpub.com/networking-and-servers/mastering-linux-network-administration?utm_source=github&utm_medium=repository&utm_campaign=9781784399597)
-* [Linux Mint Essentials](https://www.packtpub.com/networking-and-servers/linux-mint-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781782168157)
