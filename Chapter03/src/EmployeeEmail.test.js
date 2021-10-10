@@ -8,5 +8,10 @@ test('it accepts a username and displays to the screen', () => {
 
   user.type(input, 'jane doe')
 
-  expect(screen.getByText(/jane.doe@software-plus.com/i)).toBeInTheDocument()
+  // expect(screen.getByText(/jane.doe@software-plus.com/i)).toBeInTheDocument()
+		expect(
+			screen.getByRole('textbox', {
+				name: /enter your name/i,
+			}).value
+		).toEqual('jane doe');
 })
